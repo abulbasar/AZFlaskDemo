@@ -2,6 +2,13 @@ import requests
 from xml.etree import ElementTree as et
 
 
+import logging
+from logging.config import fileConfig
+
+fileConfig('logging.ini')
+logger = logging.getLogger()
+
+
 def load_rss_feed():
     url = "https://www.zdnet.com/news/rss.xml"
     response = requests.get(url)
