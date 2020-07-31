@@ -12,8 +12,6 @@ fileConfig('logging.ini')
 logger = logging.getLogger()
 
 
-def add(a, b):
-    return a + b
 
 @app.route('/')
 def hello_world():
